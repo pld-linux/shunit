@@ -1,11 +1,11 @@
 Summary:	xUnit based unit testing for Unix shell scripts
 Name:		shunit
-Version:	2.1.5
+Version:	2.1.6
 Release:	0.2
 License:	LGPL 2.1
 Group:		Development/Building
 Source0:	http://shunit2.googlecode.com/files/%{name}2-%{version}.tgz
-# Source0-md5:	f434f0095f7ca9a698ade330feae356a
+# Source0-md5:	4af955ef88c454808754939c83afa22b
 URL:		http://code.google.com/p/shunit2/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,7 +23,7 @@ rm -f doc/LGPL-2.1
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_examplesdir}/%{name}-%{version}}
-install src/shell/shunit2 $RPM_BUILD_ROOT%{_bindir}/%{name}
+install src/shunit2 $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
